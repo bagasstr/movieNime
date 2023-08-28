@@ -4,5 +4,5 @@ import SpaceAds from "@/components/SpaceAds";
 import Image from "next/image";
 
 export default function Home() {
-  return <>Akses Api: https/api/movie</>;
+  return <>Akses Api: /api/movie</>;
 }
