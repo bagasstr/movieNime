@@ -1,5 +1,6 @@
 import { load } from "cheerio";
-import puppeteer from "puppeteer";
+// import puppeteer from "puppeteer";
+import puppeteer from "puppeteer-core";
 
 const url = "https://samehadaku.world/";
 export default async function handler(req, res) {
@@ -7,6 +8,7 @@ export default async function handler(req, res) {
   if (method === "GET") {
     const browser = await puppeteer.launch({
       headless: "new",
+      executablePath: "/path/to/chrome/executable",
     });
     const page = await browser.newPage();
     await page.goto(url);
