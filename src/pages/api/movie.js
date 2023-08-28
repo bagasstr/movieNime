@@ -5,9 +5,7 @@ const url = "https://samehadaku.world/";
 export default async function handler(req, res) {
   const method = req.method;
   if (method === "GET") {
-    const browser = await puppeteer.launch({
-      headless: "new",
-    });
+    const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto(url);
     const html = await page.content();
