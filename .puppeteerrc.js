@@ -1,10 +1,11 @@
-const { puppeteer } = "puppeteer";
-const { join } = puppeteer;
+import { join } from "path";
+
+const cacheDirectory = join(process.cwd(), ".cache", "puppeteer");
 
 /**
- * @type {import("puppeteer").Configuration}
+ * @type {import("puppeteer").LaunchOptions}
  */
-module.exports = {
+export const puppeteerConfig = {
   // Changes the cache location for Puppeteer.
-  cacheDirectory: join(__dirname, ".cache", "puppeteer"),
+  userDataDir: cacheDirectory,
 };
