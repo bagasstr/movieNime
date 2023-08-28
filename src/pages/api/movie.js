@@ -1,6 +1,6 @@
 import { load } from "cheerio";
-// import puppeteer from "puppeteer";
-import puppeteer from "puppeteer-core";
+import puppeteer from "puppeteer";
+// import puppeteer from "puppeteer-core";
 
 const url = "https://samehadaku.world/";
 export default async function handler(req, res) {
