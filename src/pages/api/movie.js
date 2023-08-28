@@ -8,7 +8,6 @@ export default async function handler(req, res) {
   if (method === "GET") {
     const browser = await puppeteer.launch({
       headless: false,
-      executablePath: "/path/to/chrome",
     });
     const page = await browser.newPage();
     await page.goto(url);
